@@ -6,9 +6,4 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test "should get action" do
-    get products_action_url
-    assert_response :success
-  end
-
 end
