@@ -6,15 +6,26 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-goat_milk = Product.create(title: 'Hello')
+# goat_milk = Product.create(title: 'Hello')
 
-unless goat_milk.valid?
-  puts 'VALIDATION ERRORS:'
-  goat_milk.errors.messages.each do |column, errors|
-    errors.each do |error|
-      puts "- The #{column} #{error}."
-    end
-  end
-end
+# unless goat_milk.valid?
+#   puts 'VALIDATION ERRORS:'
+#   goat_milk.errors.messages.each do |column, errors|
+#     errors.each do |error|
+#       puts "- The #{column} #{error}."
+#     end
+#   end
+# end
+
+# puts Product.count
+
+# 676.times do
+#   new_product = Product.create(
+#     title: Faker::Food.ingredient,
+#     description: Faker::Food.description,
+#     price: Faker::Commerce.price,
+#     stock_quantity: Faker::Number.between(from: 1, to: 100)
+#   )
+# end
 
 puts Product.count
