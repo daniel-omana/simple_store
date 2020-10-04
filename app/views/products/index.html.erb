@@ -1,6 +1,6 @@
 <h1>List of Products avaliable</h1>
 <ul>
   <% @products.each do |product|%>
-    <li> <%= link_to product.title, product %></li>
+    <li> <%= link_to product.title, product %> belongs in the</li>
   <%end%>
 </ul>
