@@ -5,3 +5,16 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+goat_milk = Product.create(title: 'Hello')
+
+unless goat_milk.valid?
+  puts 'VALIDATION ERRORS:'
+  goat_milk.errors.messages.each do |column, errors|
+    errors.each do |error|
+      puts "- The #{column} #{error}."
+    end
+  end
+end
+
+puts Product.count
